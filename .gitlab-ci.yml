@@ -15,7 +15,7 @@ test artifact:
     image: alpine
     stage: test
     script: 
-        - grep -g "Gatsby" ./public/index.html
+        - grep -q "Gatsby" ./public/index.html
 test website:
     image: node 
     stage: test
