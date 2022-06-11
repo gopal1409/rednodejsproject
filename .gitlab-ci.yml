@@ -28,6 +28,7 @@ test website:
         - curl "http://localhost:9000" | grep -q "Gatsby"
 deploy to surge:
     stage: deploy
+    image: node
     script:
         - npm install --global surge
         - surge --project ./public --domain  demonic-hospital.surge.sh
